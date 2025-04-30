@@ -1,0 +1,29 @@
+{
+  "name": "placa_rodizio_sp",
+  "version": "1.0.0",
+  "description": "Aplicação básica para teste de wabpack",
+  "main": "index.js",
+  "scripts": {
+    "go": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Placa_Rodizio_SP"
+  },
+  "keywords": [
+    "Placa",
+    "carros",
+    "rodizio",
+    "SãoPaulo-Br"
+  ],
+  "author": "Pablo Bezerra",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "sass": "^1.87.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1"
+  }
+}
