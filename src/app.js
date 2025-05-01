@@ -1,1 +1,4 @@
-console.log("olá mundo")
+import "./js/dom"
+import "./js/exec"
+
+console.log("olá mundo!")
