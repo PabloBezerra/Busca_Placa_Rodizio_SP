@@ -11,25 +11,22 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _exec__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./exec */ "./src/js/exec.js");
 
-
-const form = document.querySelector("#form")
-const input = document.querySelector("#placa")
-const pRec = document.querySelector("#rec")
-const dia = document.querySelector("#dia")
-
-form.addEventListener( "submit" ,(e)=>{
-    e.preventDefault()
-    printInfo((0,_exec__WEBPACK_IMPORTED_MODULE_0__.validaPlaca)(input.value))
-})
-
-function printInfo(obj){
-    if (obj.sucesso){
-        pRec.innerHTML = 'O dia de rodízio do seu carro é na'
-        dia.innerHTML = (0,_exec__WEBPACK_IMPORTED_MODULE_0__.diaSemana)(obj.valor)
-        return
-    }
-    pRec.innerHTML = obj.valor
-    return
+var form = document.querySelector("#form");
+var input = document.querySelector("#placa");
+var pRec = document.querySelector("#rec");
+var dia = document.querySelector("#dia");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  printInfo((0,_exec__WEBPACK_IMPORTED_MODULE_0__.validaPlaca)(input.value));
+});
+function printInfo(obj) {
+  if (obj.sucesso) {
+    pRec.innerHTML = 'O dia de rodízio do seu carro é na';
+    dia.innerHTML = (0,_exec__WEBPACK_IMPORTED_MODULE_0__.diaSemana)(obj.valor);
+    return;
+  }
+  pRec.innerHTML = obj.valor;
+  return;
 }
 
 /***/ }),
@@ -45,31 +42,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   diaSemana: () => (/* binding */ diaSemana),
 /* harmony export */   validaPlaca: () => (/* binding */ validaPlaca)
 /* harmony export */ });
-const modelPlaca = /^[a-z]{3}\d{2}([a-z]|\d)\d$/
-
-function validaPlaca(placa){
-    if (modelPlaca.test(placa)){
-        return {
-            sucesso : true,
-            valor: lastNumber(placa)
-        }
-    }
+var modelPlaca = /^[a-z]{3}\d{2}([a-z]|\d)\d$/;
+function validaPlaca(placa) {
+  if (modelPlaca.test(placa)) {
     return {
-        sucesso : false, 
-        valor: 'Dados inválidos! Por favor corrija as informações'
-    }
+      sucesso: true,
+      valor: lastNumber(placa)
+    };
+  }
+  return {
+    sucesso: false,
+    valor: 'Dados inválidos! Por favor corrija as informações'
+  };
 }
-
-function lastNumber(placa){
-    return placa.slice(-1)
+function lastNumber(placa) {
+  return placa.slice(-1);
 }
-
-function diaSemana(num){
-    if(num == 1 | num == 2)return "Segunda-feira"
-    if(num == 3 | num == 4)return "Terça-feira"
-    if(num == 5 | num == 6)return "Quarta-feira"
-    if(num == 7 | num == 8)return "Quinta-feira"
-    if(num == 9 | num == 0)return "Sexta-feira"
+function diaSemana(num) {
+  if (num == 1 | num == 2) return "Segunda-feira";
+  if (num == 3 | num == 4) return "Terça-feira";
+  if (num == 5 | num == 6) return "Quarta-feira";
+  if (num == 7 | num == 8) return "Quinta-feira";
+  if (num == 9 | num == 0) return "Sexta-feira";
 }
 
 /***/ })
@@ -141,8 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_exec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/exec */ "./src/js/exec.js");
 
 
-
-console.log("olá mundo!")
+console.log("olá mundo!");
 })();
 
 /******/ })()

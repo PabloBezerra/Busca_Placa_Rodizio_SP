@@ -1,13 +1,15 @@
-import { validaPlaca, diaSemana } from "./exec"
+import { validaPlaca, diaSemana, clear } from "./exec"
 
 const form = document.querySelector("#form")
 const input = document.querySelector("#placa")
 const pRec = document.querySelector("#rec")
 const dia = document.querySelector("#dia")
 
-form.addEventListener( "submit" ,(e)=>{
+form.addEventListener( "input" ,(e)=>{
     e.preventDefault()
-    printInfo(validaPlaca(input.value))
+    if(input.value.length === 7 ) return printInfo(validaPlaca(input.value))
+    clear(pRec)
+    clear(dia)
 })
 
 function printInfo(obj){

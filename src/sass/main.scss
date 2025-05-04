@@ -1,0 +1,20 @@
+$Primario: #202124;
+$Secundario: #4B4F52;
+$branco:#EEE2DE;
+$Terciario : #8d1414;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all ease-in-out .5s;
+};
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

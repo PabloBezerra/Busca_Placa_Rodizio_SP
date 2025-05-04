@@ -1,9 +1,8 @@
-const { type } = require("os")
 const path = require("path")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: "development",
-    type : "module",
     entry : "./src/app.js",
     output :{ 
         path: path.resolve(__dirname, "dist"),
@@ -11,16 +10,28 @@ module.exports = {
     },
     devtool: "source-map",
     module:{
-        rule:[
+        rules:[
             {
                 test: /\.js$/,
+                exclude : /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options:{
                         presets: ["@babel/preset-env"]
-                    }
-                }
-            }
+                    },
+                },
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: ["style-loader", "css-loader","postcss-loader","sass-loader"]
+            },
         ]
-    }
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            filename : 'index.html',
+            template: 'dist/index.html'
+        })
+    ]
+
 }

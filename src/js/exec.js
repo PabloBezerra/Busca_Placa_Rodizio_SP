@@ -1,4 +1,4 @@
-const modelPlaca = /^[a-z]{3}\d{2}([a-z]|\d)\d$/
+const modelPlaca = /^[a-z]{3}\d([a-z]|\d)\d{2}$/i
 
 export function validaPlaca(placa){
     if (modelPlaca.test(placa)){
@@ -15,6 +15,10 @@ export function validaPlaca(placa){
 
 function lastNumber(placa){
     return placa.slice(-1)
+}
+
+export function clear(dom){
+    dom.innerText = ''
 }
 
 export function diaSemana(num){
