@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 $Primario: #202124;
 $Secundario: #4B4F52;
 $branco:#EEE2DE;
 $Terciario : #8d1414;
+$fontGeral: 'montserrat', 'sans-serif';
+$fontPlaca:'';
 
 *{
     padding: 0;
@@ -10,6 +14,11 @@ $Terciario : #8d1414;
     transition: all ease-in-out .5s;
 };
 
+html,body{
+    width: 100vw;
+    height: 100vh;
+}
+
 main {
     width: 100%;
     height: 100%;
@@ -17,4 +26,26 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    h1{
+        font-family: $fontGeral;
+    };
+
+    form{
+
+        input{};
+    };
+
+    section#resultado{
+
+        p#rec{
+
+        };
+
+        div#dia{
+
+        };
+
+    };
 }
+

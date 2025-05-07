@@ -1,4 +1,4 @@
-const modelPlaca = /^[a-z]{3}\d([a-z]|\d)\d{2}$/i
+const modelPlaca = /^[a-z]{3}\d([a-j]|\d)\d{2}$/i
 
 export function validaPlaca(placa){
     if (modelPlaca.test(placa)){
